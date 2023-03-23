@@ -14,6 +14,8 @@ import { ManageBedComponent } from './pages/manage-bed/manage-bed.component';
 import { AddPatientComponent } from './pages/add-patient/add-patient.component';
 import { SelectDoctorComponent } from './pages/select-doctor/select-doctor.component';
 import { AddClinicalHistoryComponent } from './pages/add-clinical-history/add-clinical-history.component';
+import { SelectProcedureComponent } from './pages/select-procedure/select-procedure.component';
+import { CompleteReservationComponent } from './pages/complete-reservation/complete-reservation.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { AddClinicalHistoryComponent } from './pages/add-clinical-history/add-cl
     ManageBedComponent,
     AddPatientComponent,
     SelectDoctorComponent,
-    AddClinicalHistoryComponent
+    AddClinicalHistoryComponent,
+    SelectProcedureComponent,
+    CompleteReservationComponent
   ],
   imports: [
     BrowserModule,
