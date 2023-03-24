@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { SelectDoctorComponent } from './pages/select-doctor/select-doctor.compo
 import { AddClinicalHistoryComponent } from './pages/add-clinical-history/add-clinical-history.component';
 import { SelectProcedureComponent } from './pages/select-procedure/select-procedure.component';
 import { CompleteReservationComponent } from './pages/complete-reservation/complete-reservation.component';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { CompleteReservationComponent } from './pages/complete-reservation/compl
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
