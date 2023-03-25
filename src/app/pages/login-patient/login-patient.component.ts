@@ -40,13 +40,14 @@ export class LoginPatientComponent {
         console.log("2");
         this.result = item;
         console.log("3");
+        console.log(this.result.status);
         if (this.result.status == "ok"){
           console.log("4");
           console.log(this.result.status)
           console.log("5");
           this.router.navigate(['selectPatient']);
           console.log("6");
-        }else{
+        }else if(this.result.status == "error"){
           console.log(this.result.status)
           console.log("7");
           this.loginform.setErrors({ unauthenticated: true });

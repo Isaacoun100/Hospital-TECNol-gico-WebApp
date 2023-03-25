@@ -12,11 +12,11 @@ export class AuthUsersService {
   {
     return this.http.get(this.baseUrl);
   }
-  public getUsers(inputdata1:any, inputdata2:any) {
+  public getUsers(cedula:any, password:any) {
 
     let queryParams = new HttpParams();
-    queryParams = queryParams.append("cedula",inputdata1);
-    queryParams = queryParams.append("password",inputdata2);
+    queryParams = queryParams.append("cedula",cedula);
+    queryParams = queryParams.append("password",password);
 
     return this.http.get(this.baseUrl + 'auth_patient',{params:queryParams});
 }
