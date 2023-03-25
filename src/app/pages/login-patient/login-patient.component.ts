@@ -27,23 +27,21 @@ export class LoginPatientComponent {
 
     //let formObj = this.loginform.getRawValue(); // {name: '', description: ''}
     //let serializedForm = JSON.stringify(formObj);
-
     if(this.loginform.valid){
 
       this.service.getUsers(this.loginform.value.cedula, this.loginform.value.password).subscribe(item => {
         this.jsonResponse = item;
         console.log(this.jsonResponse);
+
         if (this.jsonResponse.status == "ok"){
           this.router.navigate(['selectPatient']);
+
         }else if(this.jsonResponse.status == "error"){
           this.loginform.setErrors({ unauthenticated: true });
         }
       })
     }
   }
-
-
-
 
   getUserFormData(data:any)
   {

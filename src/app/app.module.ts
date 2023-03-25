@@ -18,6 +18,7 @@ import { SelectDoctorComponent } from './pages/select-doctor/select-doctor.compo
 import { AddClinicalHistoryComponent } from './pages/add-clinical-history/add-clinical-history.component';
 import { SelectProcedureComponent } from './pages/select-procedure/select-procedure.component';
 import { CompleteReservationComponent } from './pages/complete-reservation/complete-reservation.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { CompleteReservationComponent } from './pages/complete-reservation/compl
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
 
   ],
   providers: [],
