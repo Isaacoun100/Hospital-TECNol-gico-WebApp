@@ -24,7 +24,7 @@ export class LoginPatientComponent {
   })
 
   proceedlogin(){
-
+    console.log("cum");
     //let formObj = this.loginform.getRawValue(); // {name: '', description: ''}
     //let serializedForm = JSON.stringify(formObj);
     if(this.loginform.valid){

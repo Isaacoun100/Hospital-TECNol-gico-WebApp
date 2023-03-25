@@ -8,13 +8,22 @@ export class AuthUsersService {
   constructor(private http:HttpClient) { }
   baseUrl = "https://localhost:7287/api/";
 
-  public getUsers(cedula:any, password:any) {
+public getUsers(cedula:any, password:any) {
+  
+  let queryParams = new HttpParams();
+  queryParams = queryParams.append("cedula",cedula);
+  queryParams = queryParams.append("password",password);
 
-    let queryParams = new HttpParams();
-    queryParams = queryParams.append("cedula",cedula);
-    queryParams = queryParams.append("password",password);
+  return this.http.get(this.baseUrl + 'auth_patient',{params:queryParams});
+}
 
-    return this.http.get(this.baseUrl + 'auth_patient',{params:queryParams});
+public getUserDoctor(cedula:any, password:any) {
+
+  let queryParams = new HttpParams();
+  queryParams = queryParams.append("cedula",cedula);
+  queryParams = queryParams.append("password",password);
+
+  return this.http.get(this.baseUrl + 'auth_worker',{params:queryParams});
 }
   
 }
