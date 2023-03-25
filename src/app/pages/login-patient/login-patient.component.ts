@@ -15,7 +15,7 @@ export class LoginPatientComponent {
     private router: Router){
     }
 
-  result: any;
+  jsonResponse: any;
  
 
   loginform = this.builder.group({
@@ -28,30 +28,15 @@ export class LoginPatientComponent {
     //let formObj = this.loginform.getRawValue(); // {name: '', description: ''}
     //let serializedForm = JSON.stringify(formObj);
 
-    
-
-    console.log(this.loginform.value.cedula);
-    console.log(this.loginform.value.password);
-
     if(this.loginform.valid){
-      console.log("1");
 
       this.service.getUsers(this.loginform.value.cedula, this.loginform.value.password).subscribe(item => {
-        console.log("2");
-        this.result = item;
-        console.log("3");
-        console.log(this.result.status);
-        if (this.result.status == "ok"){
-          console.log("4");
-          console.log(this.result.status)
-          console.log("5");
+        this.jsonResponse = item;
+        console.log(this.jsonResponse);
+        if (this.jsonResponse.status == "ok"){
           this.router.navigate(['selectPatient']);
-          console.log("6");
-        }else if(this.result.status == "error"){
-          console.log(this.result.status)
-          console.log("7");
+        }else if(this.jsonResponse.status == "error"){
           this.loginform.setErrors({ unauthenticated: true });
-          console.log("8");
         }
       })
     }

@@ -8,10 +8,6 @@ export class AuthUsersService {
   constructor(private http:HttpClient) { }
   baseUrl = "https://localhost:7287/api/";
 
-  users()
-  {
-    return this.http.get(this.baseUrl);
-  }
   public getUsers(cedula:any, password:any) {
 
     let queryParams = new HttpParams();
