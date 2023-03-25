@@ -1,0 +1,28 @@
+<body class="text-center">
+    
+  <main class="form-signin w-100 m-auto">
+    <form [formGroup]="loginform" (ngSubmit)="proceedlogin()">
+      <img class="mb-4" src="https://picsum.photos/50/50" alt="" width="72" height="57">
+      <h1 class="h3 mb-3 fw-normal">Inicio de sesión paciente</h1>
+  
+      <div class="form-floating">
+        <input type="email" class="form-control" formControlName="cedula" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Cédula</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" formControlName="password" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Contraseña</label>
+
+
+      </div>
+      <button class="button" type="submit">Acceder</button>
+       <!-- tag<a class="w-100 btn btn-lg btn-primary" type="submit" href="selectPatient">Acceder</a>a -->
+      <div *ngIf="loginform.errors?.['unauthenticated']">Username or Password incorrect!</div>
+      <p class="mt-5 mb-3 text-muted"></p>
+
+      <a href="addPatient" type="button" class="btn w-100 btn btn-lg btn-primary">Crear paciente</a>
+      <p class="mt-5 mb-3 text-muted">© 2023</p>
+
+    </form>
+  </main>
+</body>

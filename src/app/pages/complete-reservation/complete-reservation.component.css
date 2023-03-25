@@ -1,0 +1,16 @@
+body {
+    background-color: #aabfdf;
+}
+
+input{
+    size: 100%;
+}
+
+label{
+    padding: 15px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+  }
