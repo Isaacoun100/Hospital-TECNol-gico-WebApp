@@ -1,0 +1,70 @@
+<body class="text-center">
+
+    <main class="form-signin w-100 m-auto">
+        
+        <form [formGroup]="updateLocation" (ngSubmit)="proceedUpdateLocation()">
+
+            <div class="row">
+
+                <div class="column">
+
+                    <h1>Actualizar Ubicación</h1>
+
+                    <div class="form-floating">
+                        <input type="cedulaUbicacion" class="form-control" formControlName="cedula" id="CedulaUbicacion" placeholder="Cedula">
+                        <label for="floatingPassword">Cédula</label>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="form-floating">
+                            <input type="provincia" class="form-control" formControlName="provincia" id="floatingPassword" placeholder="Provincia">
+                            <label for="floatingPassword">Provincia</label>
+                        </div>
+
+                        <div class="form-floating">
+                            <input type="canton" class="form-control" formControlName="canton" id="floatingPassword" placeholder="Canton">
+                            <label for="floatingPassword">Cantón</label>
+                        </div>
+                        
+                        <div class="form-floating">
+                            <input type="form" class="form-control" formControlName="distrito" id="floatingPassword" placeholder="Distrito">
+                            <label for="floatingPassword">Distrito</label>
+                        </div>
+                        
+                    </div>
+        
+                    <button href="selectPatient" type="submit" class="btn w-100 btn btn-lg btn-primary">Agregar Ubicación</button>
+        
+                </div>
+
+
+            </div>
+        </form>
+
+        <form [formGroup]="updatePhone" (ngSubmit)="proceedUpdatePhone()">
+
+                <div class="column">
+
+                    <h1>Actualizar Teléfono</h1>
+
+                    <div class="form-floating">
+                        <input type="cedulaTel" class="form-control" formControlName="cedula" id="CedulaTel" placeholder="Cedula">
+                        <label for="floatingPassword">Cédula</label>
+                    </div>
+
+                    <div class="form-floating">
+                        <input type="telefono" class="form-control" formControlName="telefono" id="floatingPassword" placeholder="Teléfono">
+                        <label for="floatingPassword">Teléfono</label>
+                    </div>
+
+                    <button type="submit" class="btn w-100 btn btn-lg btn-primary">Agregar teléfono</button>
+
+                
+                </div>
+
+        </form>
+
+    </main>
+
+</body> 

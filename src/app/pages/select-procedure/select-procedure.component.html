@@ -1,6 +1,6 @@
 <body>
     <div>
-        <form>
+        <form [formGroup]="procedureForm" (ngSubmit)="proceedProcedureForm()">
             <div class="px-md-5 mb-5">
 
             <h1>Disponibilidad de la cama</h1>
@@ -9,15 +9,15 @@
 
             <label for="fechaIngresoLabel">Seleccione el procedimiento que desea realizar</label>
 
-                <select class="select mb-1" >
-                  <option value="1" disabled>Operación</option>
-                  <option value="2">Apendicectomía</option>
-                  <option value="3">Biopsia de mama</option>
-                  <option value="4">Cesárea</option>
-                  <option value="5">Cirugía de cataratas</option>
-                  <option value="6">Cirugía para lumbalgia</option>
-                  <option value="7">Histerectomía</option>
-                  <option value="8">Mastectomía</option>
+                <select formControlName="procedimiento_nombre" class="select mb-1" >
+                  <option value="Operación" disabled>Operación</option>
+                  <option value="Apendicectomía">Apendicectomía</option>
+                  <option value="Biopsia de mama">Biopsia de mama</option>
+                  <option value="Cesárea">Cesárea</option>
+                  <option value="Cirugía de cataratas">Cirugía de cataratas</option>
+                  <option value="Cirugía para lumbalgia">Cirugía para lumbalgia</option>
+                  <option value="Histerectomía">Histerectomía</option>
+                  <option value="Mastectomía">Mastectomía</option>
 
 
                 </select>
@@ -45,7 +45,18 @@
         
                     </div>
 
-                </div>                
+                </div>
+                
+                <div class="column">
+                    
+                    <div style="text-align: center">
+    
+                        <button  type="submit" class="btn btn-success btn-lg mb-4 center" href="completeReservation">Cargar</button >
+        
+                    </div>
+
+                </div> 
+
               </div>
         </form>
     </div>

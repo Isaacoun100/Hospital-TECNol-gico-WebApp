@@ -1,14 +1,13 @@
 <body>
     <div>
-        <form>
-
+        <form [formGroup]="appointment" (ngSubmit)="manageBed()">
             <div class="row">
                 <div class="column">
 
                     <div class="px-md-5 mb-5">
                         <h1>Hacer reservación</h1>
                         <label for="fechaIngresoLabel">Cédula del paciente</label>
-                        <input type="email" class="form-control" id="fechaIngresoBox" aria-describedby="emailHelp" placeholder="Ingrese cédula">
+                        <input type="email" class="form-control" formControlName="cedula" id="fechaIngresoBox" aria-describedby="emailHelp" placeholder="Ingrese cédula">
                         </div>
 
                 </div>
@@ -16,14 +15,14 @@
 
                     <div class="form-date">
                         <label class="form-date__label" for="input-date"> Fecha reservación</label>
-                        <input class="form-date__input" type="date" id="input-date" name="input-date-start" value="2018–07–22">
+                        <input class="form-date__input" type="date" formControlName="fecha_ingreso" id="input-date" name="input-date-start" value="2018–07–22">
                         </div>
 
                 </div>
             </div>
             
             <div style="text-align: center">
-                <a type="submit" class="btn btn-success btn-lg mb-4 center" href="selectProcedure">Submit</a>
+            <button class="button" type="submit">Acceder</button>
             </div>
 
         </form>

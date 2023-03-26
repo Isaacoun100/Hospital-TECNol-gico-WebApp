@@ -19,6 +19,7 @@ import { AddClinicalHistoryComponent } from './pages/add-clinical-history/add-cl
 import { SelectProcedureComponent } from './pages/select-procedure/select-procedure.component';
 import { CompleteReservationComponent } from './pages/complete-reservation/complete-reservation.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ModifPatientComponent } from './pages/modif-patient/modif-patient.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SelectDoctorComponent,
     AddClinicalHistoryComponent,
     SelectProcedureComponent,
-    CompleteReservationComponent
+    CompleteReservationComponent,
+    ModifPatientComponent
   ],
   imports: [
     BrowserModule,

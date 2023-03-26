@@ -9,11 +9,9 @@ import {AuthUsersService} from '../../services/auth-users.service';
   styleUrls: ['./login-patient.component.css']
 })
 export class LoginPatientComponent {
-  title = 'Hospital-TECNologico-WebApp';
-  users:any;
-  constructor(private builder: FormBuilder, private service: AuthUsersService,  
-    private router: Router){
-    }
+  
+  constructor(private builder: FormBuilder, private service: AuthUsersService, 
+    private router: Router){ }
 
   jsonResponse: any;
  
@@ -24,27 +22,23 @@ export class LoginPatientComponent {
   })
 
   proceedlogin(){
-    console.log("cum");
     //let formObj = this.loginform.getRawValue(); // {name: '', description: ''}
     //let serializedForm = JSON.stringify(formObj);
     if(this.loginform.valid){
 
       this.service.getUsers(this.loginform.value.cedula, this.loginform.value.password).subscribe(item => {
         this.jsonResponse = item;
-        console.log(this.jsonResponse);
+        //console.log(this.jsonResponse);
 
         if (this.jsonResponse.status == "ok"){
           this.router.navigate(['selectPatient']);
 
-        }else if(this.jsonResponse.status == "error"){
+        }else {
+          
           this.loginform.setErrors({ unauthenticated: true });
         }
       })
     }
   }
 
-  getUserFormData(data:any)
-  {
-    console.warn(data)
-  }
 }

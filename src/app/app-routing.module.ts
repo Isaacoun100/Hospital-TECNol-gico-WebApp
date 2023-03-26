@@ -5,6 +5,7 @@ import { SelectProcedureComponent } from './pages/select-procedure/select-proced
 import { SelectPatientComponent } from './pages/select-patient/select-patient.component';
 import { LoginPatientComponent } from './pages/login-patient/login-patient.component';
 import { SelectDoctorComponent } from './pages/select-doctor/select-doctor.component';
+import { ModifPatientComponent } from './pages/modif-patient/modif-patient.component';
 import { LoginDoctorComponent } from './pages/login-doctor/login-doctor.component';
 import { AddPatientComponent } from './pages/add-patient/add-patient.component';
 import { ManageBedComponent } from './pages/manage-bed/manage-bed.component';
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path:'loginPatient', component:LoginPatientComponent},
   {path:'loginDoctor', component:LoginDoctorComponent},
   {path:'addPatient', component:AddPatientComponent},
-  {path:'manageBed', component:ManageBedComponent}
+  {path:'manageBed', component:ManageBedComponent},
+  {path:'modifPatient', component:ModifPatientComponent}
 ];
 
 @NgModule({
