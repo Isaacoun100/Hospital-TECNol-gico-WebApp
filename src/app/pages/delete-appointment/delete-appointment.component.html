@@ -1,0 +1,17 @@
+<body>
+    <div>
+        <h1>Eliminar Cita</h1>
+    </div>
+
+    <form [formGroup]="loginform" (ngSubmit)="deleteAppointment()">
+
+        <div class="form-floating">
+            <input type="number" class="form-control" formControlName="reservation_ID" id="floatingInput" placeholder="reservation_ID">
+            <label for="floatingInput">ID de la Cita</label>
+          </div>
+
+        <button class="btn w-100 btn btn-lg btn-primary" type="submit">Eliminar</button>
+
+    </form>
+
+ </body>

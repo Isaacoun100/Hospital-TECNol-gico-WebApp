@@ -1,3 +1,4 @@
+import { DeleteAppointmentComponent } from './pages/delete-appointment/delete-appointment.component';
 import { CompleteReservationComponent } from './pages/complete-reservation/complete-reservation.component';
 import { SeeClinicalHistoryComponent } from './pages/see-clinical-history/see-clinical-history.component';
 import { AddClinicalHistoryComponent } from './pages/add-clinical-history/add-clinical-history.component';
@@ -18,14 +19,15 @@ const routes: Routes = [
   {path:'completeReservation', component:CompleteReservationComponent},
   {path:'addClinicalHistory', component:AddClinicalHistoryComponent},
   {path:'seeClinicalHistory', component:SeeClinicalHistoryComponent},
+  {path:'deleteAppointment', component:DeleteAppointmentComponent},
   {path:'selectProcedure', component:SelectProcedureComponent},
   {path:'selectPatient', component:SelectPatientComponent},
   {path:'selectDoctor', component:SelectDoctorComponent},
   {path:'loginPatient', component:LoginPatientComponent},
+  {path:'modifPatient', component:ModifPatientComponent},
   {path:'loginDoctor', component:LoginDoctorComponent},
   {path:'addPatient', component:AddPatientComponent},
-  {path:'manageBed', component:ManageBedComponent},
-  {path:'modifPatient', component:ModifPatientComponent}
+  {path:'manageBed', component:ManageBedComponent}
 ];
 
 @NgModule({

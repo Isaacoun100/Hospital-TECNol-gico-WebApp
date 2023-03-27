@@ -26,6 +26,24 @@ public getUserDoctor(cedula:any, password:any) {
   return this.http.get(this.baseUrl + 'auth_worker',{params:queryParams});
 }
 
+public getClinicalHistory(cedula:any) {
+
+  let queryParams = new HttpParams();
+  queryParams = queryParams.append("cedula",cedula);
+
+  return this.http.get(this.baseUrl + 'get_history',{params:queryParams});
+
+}
+
+public deleteComponent(reservation_ID:any) {
+
+  let queryParams = new HttpParams();
+  queryParams = queryParams.append("reservation_ID",reservation_ID);
+
+  return this.http.delete(this.baseUrl + 'delete_reservation',{params:queryParams});
+
+}
+
 public postUserPatient(data:any) {
 
   return this.http.post(this.baseUrl + 'create_patient', data);
@@ -61,9 +79,4 @@ public postProcedureReservation(data:any) {
   return this.http.post(this.baseUrl + 'insert_procedure_reservation', data);
 }
 
-
-
-
-
-  
 }

@@ -20,6 +20,7 @@ import { SelectProcedureComponent } from './pages/select-procedure/select-proced
 import { CompleteReservationComponent } from './pages/complete-reservation/complete-reservation.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModifPatientComponent } from './pages/modif-patient/modif-patient.component';
+import { DeleteAppointmentComponent } from './pages/delete-appointment/delete-appointment.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { ModifPatientComponent } from './pages/modif-patient/modif-patient.compo
     AddClinicalHistoryComponent,
     SelectProcedureComponent,
     CompleteReservationComponent,
-    ModifPatientComponent
+    ModifPatientComponent,
+    DeleteAppointmentComponent
   ],
   imports: [
     BrowserModule,

@@ -11,16 +11,22 @@ import {AuthUsersService} from '../../services/auth-users.service';
 export class LoginPatientComponent {
   
   constructor(private builder: FormBuilder, private service: AuthUsersService, 
-    private router: Router){ }
+    private router: Router){}
 
   jsonResponse: any;
- 
 
+  /**
+   * Form that will be used to send the information to the auth-users.specs.ts
+   */
+  
   loginform = this.builder.group({
     cedula: this.builder.control('', Validators.required),
     password: this.builder.control('', Validators.required)
   })
 
+  /**
+   * Function to get the information in the form and send it to a method that will sent it as an HTTPS request
+   */
   proceedlogin(){
     //let formObj = this.loginform.getRawValue(); // {name: '', description: ''}
     //let serializedForm = JSON.stringify(formObj);

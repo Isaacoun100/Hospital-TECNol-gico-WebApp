@@ -12,9 +12,13 @@ import {Reservacion} from './Reservacion';
 })
 export class SelectProcedureComponent {
 
+  /**
+   * Form that will be used to send the information to the auth-users.specs.ts
+   */
   jsonResponse: any;
   myInteger: number = 0;
 
+  
   constructor(private builder: FormBuilder, private service: AuthUsersService,  
     private router: Router){}
 

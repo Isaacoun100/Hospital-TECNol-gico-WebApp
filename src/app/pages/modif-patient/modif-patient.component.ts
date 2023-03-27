@@ -14,6 +14,9 @@ export class ModifPatientComponent {
   constructor(private builder: FormBuilder, private service: AuthUsersService,  
     private router: Router){}
 
+    /**
+     * Form that will be used to send the information to the auth-users.specs.ts
+     */
     updateLocation = this.builder.group({
       cedula: this.builder.control('', Validators.required),
       provincia: this.builder.control('', Validators.required),
@@ -23,11 +26,17 @@ export class ModifPatientComponent {
 
     })
 
+    /**
+     * Form that will be used to send the information to the auth-users.specs.ts
+     */
     updatePhone = this.builder.group({
       cedula: this.builder.control('', Validators.required),
       telefono: this.builder.control('', Validators.required),
     })
 
+    /**
+   * Function to get the information in the form and send it to a method that will sent it as an HTTPS request
+   */
     proceedUpdateLocation(){
       let formObj = this.updateLocation.getRawValue(); // {name: '', description: ''}
       console.log(formObj);
@@ -41,6 +50,9 @@ export class ModifPatientComponent {
       }
     }
 
+    /**
+   * Function to get the information in the form and send it to a method that will sent it as an HTTPS request
+   */
     proceedUpdatePhone(){
       let formObj1 = this.updatePhone.getRawValue(); // {name: '', description: ''}
       console.log(formObj1);
